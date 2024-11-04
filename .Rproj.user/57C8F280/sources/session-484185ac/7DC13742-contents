@@ -26,7 +26,7 @@ matriz_dna2 <- dist.alignment(alin_2_2, "identity")
 # Arbol 
 library(ape)
 
-pdf("result/arboles")
+pdf("result/arboles.pdf")
 arbol_dna1 <- nj(matriz_dna1) # Algoritmo de union de los mas cercanos
 plot(arbol_dna1, main="Arbol filogenetico de alineamiento con ClustalW") 
 
