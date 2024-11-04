@@ -1,0 +1,44 @@
+
+######           Jurassic Park
+
+# A partir del archivo FASTA llamado DinoJurassic.fna. 
+#  (a) Lee el archivo en R y calcula el porcentaje de GC
+library(Biostrings)  
+
+dino_fasta <- readDNAStringSet("archivos_extra/DinoJurassic.fna")
+
+alphabetFrequency(dino_fasta) # Numero de veces que aparece cada letra
+width(dino_fasta)
+
+porc_cg <- (letterFrequency(dino_fasta, "GC")*(100))/(width(dino_fasta))
+porc_cg
+
+# % de C seguidas de G
+porc_gc <- ((dinucleotideFrequency(dino_fasta)[ ,"GC"])*(100))/(width(dino_fasta))
+porc_gc
+
+#  (b) Blastea la secuencia determina e interpreta tu resultado. 
+# Puedes usar esta herramineta (CABRA) o usar BLAST directamente.
+# ¿cuales serıan los organismos mas cercanos? 
+#  Yo supondria que los reptiles, pero en base al alineamiento, no presentan homologia con genes de algun organismo en si.
+#  Esta secuencia presente un alto grado de homologia con secuencias artificiales (por ejemplo vectores)
+
+# ¿Tiene sentido que la secuencia sea de dinosaurios?
+#   No, parece que es una secuencia artificial.
+  
+#  (c) Elabora una grafica de e-values y los organismos mas cercanos.
+
+blast <- read.csv("archivos_extra/alignment.csv") # Leer los reslt del alinemt
+
+dino_blast <- blast[1:50, ] # Mantener las unicos r con inf
+
+library(ggplot2)
+
+plot(dino_blast$E.value) # e-value (Y) de cada secuencia (X)
+
+#  (d) Elabora un arbol filogenetico con los 10 organismos mas cercanos
+dino_par <- dino_blast[1:10,4]
+
+library(stats)
+
+plot(hclust(dist(dino_par), )) # Dendograma jerarquico a partir de la matriz de dist de los 10 primeros mas parecidos 
