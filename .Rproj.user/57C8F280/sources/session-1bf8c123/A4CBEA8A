@@ -3,24 +3,24 @@
     "path": "~/5to Semestre/BioInfo_Roberto/clases/proyect_github/scrips/arbol_tree.R",
     "project_path": "scrips/arbol_tree.R",
     "type": "r_source",
-    "hash": "2214431994",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1730756641840.0,
     "source_on_save": false,
     "relative_order": 5,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "21,2",
-        "scrollLine": "0"
+        "cursorPosition": "69,0",
+        "scrollLine": "44"
     },
     "folds": "",
-    "lastKnownWriteTime": 1730884154,
+    "lastKnownWriteTime": 1730909983,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1730884154689,
+    "last_content_update": 1730910967492,
     "read_only": false,
     "read_only_alternatives": []
 }
