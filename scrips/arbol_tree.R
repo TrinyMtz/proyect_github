@@ -9,7 +9,7 @@ arbol_dna2 <- nj(matriz_dna2) # Del ejercicio anterior
 
 arbol_dna1
 
-pdf("result/arbol1_con_ggtree")
+# pdf("result/arbol1_con_ggtree.pdf")
 
 ggtree(arbol_dna1, layout="circular", color="#0808E5") + geom_tiplab(color='green') + 
   geom_nodepoint(color="red") + geom_rootedge(rootedge = 0.5)
@@ -19,6 +19,6 @@ ggtree(arbol_dna1, layout="circular", color="#0808E5") + geom_tiplab(color='gree
 ggtree(arbol_dna1, color="#0808E5") + geom_tiplab(color='grey30', aes(label=label), offset = .01) + 
   geom_nodepoint(color="red") + geom_rootedge(rootedge = 0.5)
 
-dev.off()
+# dev.off()
 
 
