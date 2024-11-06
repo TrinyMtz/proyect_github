@@ -66,4 +66,4 @@ arb_dna1 <- ggtree(arbol_dna1, layout="ellipse", branch.length="none", color="#0
   geom_nodepoint(color="grey30", alpha=1/4, size=10) 
 arb_dna1 + geom_tippoint(color="pink", shape=5, size=9)
 
-
+ggsave("result/arbol1_ggtree.png", plot = arb_dna1, width = 10, height = 10)
