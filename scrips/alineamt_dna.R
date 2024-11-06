@@ -1,7 +1,7 @@
 ###    Lectura de sec
 library(Biostrings)
 
-sec_dna <- readDNAStringSet("secuencias/FASTA.fa")
+sec_dna <- readDNAStringSet("")
 
 ###    Alineamiento
 library(msa)
